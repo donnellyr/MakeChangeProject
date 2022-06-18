@@ -6,6 +6,8 @@ Scanner - The scanner was used to receive the user input to be calculated.
 
 Double - Doubles were used to store the user input data as these are cash transactions and require the use of a decimal point.
 
+Float - Casted double values from user input to floats to have values rounded up to the nearest hundredth
+
 Int - Ints were used to store the amount of each individual currency and make the end product look cleaner when printed, since they will always be whole numbers as you can't have a fraction of a quarter or dime.
 
 If statement - used to execute certain functions when their corresponding denominations of money are used.

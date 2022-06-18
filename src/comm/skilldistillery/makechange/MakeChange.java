@@ -6,7 +6,7 @@ public class MakeChange {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		double pay, price;
+		double pay = 0, price = 0;
 		System.out.println("What is the price of the item?");
 		price = input.nextDouble();
 		System.out.println("How much did the customer pay?");
@@ -18,14 +18,14 @@ public class MakeChange {
 		
 	}
 	public static String change(double pay, double price) {
-		double change = pay - price;
-		String output ="Item price: $" + price +" Amount payed: $" + pay + " ERROR INSUFICIANT FUNDS";
+		float change = (float)(pay - price);
+		String output ="Item price: $" + price +" Amount payed: $" + pay + " ERROR INSUFICIANT FUNDS $" + (change * -1) + " NEEDED TO COMPLETE TRANSACTION";
 		int twenty = 0, ten = 0, five = 0, one = 0, quarter = 0, dime = 0, nickle = 0, penny = 0; 
 		if(change == 0) {
 			output = "Item price: $" + price +" Amount payed: $" + pay + " Exact amount recived no change needed";
 		}
 		else if(change > 0) {
-			output = "Item price: $" + price +" Amount payed: $" + pay + " Change Tendered:";
+			output = "Item price: $" + price +" Amount payed: $" + pay + " Change owed: $" + change + " Tendered:";
 			while(change >= 20.0) {
 				change-=20.0;
 				twenty++;
